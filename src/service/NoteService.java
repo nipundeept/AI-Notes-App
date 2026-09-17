@@ -32,7 +32,6 @@ public class NoteService {
                 storage.remove(note); //ConcurrentModificationException
                 return true;
             }
-
         }
         return false;*/
         //do not repeat the logic when you can reuse an existing method

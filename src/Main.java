@@ -8,16 +8,23 @@ public class Main {
         service.addNote(2, "Java", "Implementing a project in Java");
         service.addNote(3, "Music", "I like Daft Punk music");
         for (Note note : service.getAllNotes()) {
-            System.out.println(note.getId());
-            System.out.println(note.getTitle());
-            System.out.println(note.getContent());
+            System.out.println("Note ID : " + note.getId());
+            System.out.println("Title : " + note.getTitle());
+            System.out.println("Content : " + note.getContent());
         }
-        service.deleteNote(1);
-        System.out.println("After deletion the container looks like : ");
+        service.updateNote(3, "Music", "I like Michael Jackson music");
+        System.out.println("After updating : ");
         for (Note note : service.getAllNotes()) {
-            System.out.println(note.getId());
-            System.out.println(note.getTitle());
-            System.out.println(note.getContent());
+            System.out.println("Note ID : " + note.getId());
+            System.out.println("Title : " + note.getTitle());
+            System.out.println("Content : " + note.getContent());
+        }
+        service.deleteNote(2);
+        System.out.println("After deletion: ");
+        for (Note note : service.getAllNotes()) {
+            System.out.println("Note ID : " + note.getId());
+            System.out.println("Title : " + note.getTitle());
+            System.out.println("Content : " + note.getContent());
         }
     }
 }
