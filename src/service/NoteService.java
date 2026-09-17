@@ -43,4 +43,14 @@ public class NoteService {
         }
         return false;
     }
+
+    public boolean updateNote(int id, String newTitle, String newContent) {
+        Note note = getNoteById(id);
+        if (note != null) {
+            note.setTitle(newTitle);
+            note.setContent(newContent);
+            return true;
+        }
+        return false;
+    }
 }
